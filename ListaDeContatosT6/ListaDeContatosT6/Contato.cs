@@ -69,7 +69,21 @@ namespace ListaDeContatosT6
             Telefone = "11 4002-8922";
             
         }
+
+        //Sobrecarga do método construtor 
+
+        public Contato (string nome, string sobrenome, string telefone)
+        {
+            Nome = nome;    
+            Sobrenome = sobrenome;  
+            Telefone = telefone;   
+        }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
+
 }
 
 
