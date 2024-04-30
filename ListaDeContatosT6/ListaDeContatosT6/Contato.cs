@@ -51,13 +51,13 @@ namespace ListaDeContatosT6
             }
             set
             {
-                if (value.Length == 13)
+                if (value.Length == 11)
                 {
                     telefone = value;
                 }
                 else
                 {
-                    Telefone = "(00) 0000-0000";
+                    telefone = "11999999999";
                 }
             }
         }
@@ -66,7 +66,7 @@ namespace ListaDeContatosT6
         {
             Nome = "Claudia";
             Sobrenome = "Genésio II";
-            Telefone = "11 4002-8922";
+            Telefone = "11999999999";
             
         }
 
@@ -81,17 +81,17 @@ namespace ListaDeContatosT6
         public override string ToString()
         {
             string saida = string.Empty;
-            saida += String.Format("{0} {1}", Nome, Sobrenome):
-            saida += String.Format("{0} {1}-{2}",
+            saida += String.Format("{0} {1}", Nome, Sobrenome);
+            saida += String.Format("({0}) {1}-{2}",
                 Telefone.Substring(0, 2),
-                Telefone.Substring(3, 5),
-                Telefone.Substring(7, 4));    
+                Telefone.Substring(2, 5),
+                Telefone.Substring(7, 4));
 
 
-                
-         }
+            return saida;
+        }
     }
-
+   
 }
 
 

@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.ListBoxContatos = new System.Windows.Forms.ListBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxSobrenome = new System.Windows.Forms.TextBox();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.ListBoxContato = new System.Windows.Forms.ListBox();
             this.IncluirContato = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -71,35 +71,39 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Sobrenome";
             // 
-            // textBox1
+            // textBoxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 30);
-            this.textBox1.TabIndex = 4;
+            this.textBoxNome.Location = new System.Drawing.Point(118, 77);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(338, 30);
+            this.textBoxNome.TabIndex = 4;
+            this.textBoxNome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textBoxSobrenome
             // 
-            this.textBox2.Location = new System.Drawing.Point(165, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(338, 30);
-            this.textBox2.TabIndex = 5;
+            this.textBoxSobrenome.Location = new System.Drawing.Point(165, 125);
+            this.textBoxSobrenome.Name = "textBoxSobrenome";
+            this.textBoxSobrenome.Size = new System.Drawing.Size(338, 30);
+            this.textBoxSobrenome.TabIndex = 5;
+            this.textBoxSobrenome.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // textBoxTelefone
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(338, 30);
-            this.textBox3.TabIndex = 6;
+            this.textBoxTelefone.Location = new System.Drawing.Point(143, 179);
+            this.textBoxTelefone.Name = "textBoxTelefone";
+            this.textBoxTelefone.Size = new System.Drawing.Size(338, 30);
+            this.textBoxTelefone.TabIndex = 6;
+            this.textBoxTelefone.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // ListBoxContatos
+            // ListBoxContato
             // 
-            this.ListBoxContatos.FormattingEnabled = true;
-            this.ListBoxContatos.ItemHeight = 25;
-            this.ListBoxContatos.Location = new System.Drawing.Point(526, 12);
-            this.ListBoxContatos.Name = "ListBoxContatos";
-            this.ListBoxContatos.Size = new System.Drawing.Size(270, 429);
-            this.ListBoxContatos.TabIndex = 7;
+            this.ListBoxContato.FormattingEnabled = true;
+            this.ListBoxContato.ItemHeight = 25;
+            this.ListBoxContato.Location = new System.Drawing.Point(526, 12);
+            this.ListBoxContato.Name = "ListBoxContato";
+            this.ListBoxContato.Size = new System.Drawing.Size(270, 429);
+            this.ListBoxContato.TabIndex = 7;
+            this.ListBoxContato.SelectedIndexChanged += new System.EventHandler(this.ListBoxContatos_SelectedIndexChanged);
             // 
             // IncluirContato
             // 
@@ -107,7 +111,7 @@
             this.IncluirContato.Name = "IncluirContato";
             this.IncluirContato.Size = new System.Drawing.Size(249, 139);
             this.IncluirContato.TabIndex = 8;
-            this.IncluirContato.Text = "button1";
+            this.IncluirContato.Text = "incluir contato";
             this.IncluirContato.UseVisualStyleBackColor = true;
             this.IncluirContato.Click += new System.EventHandler(this.IncluirContato_Click);
             // 
@@ -117,15 +121,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 865);
             this.Controls.Add(this.IncluirContato);
-            this.Controls.Add(this.ListBoxContatos);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ListBoxContato);
+            this.Controls.Add(this.textBoxTelefone);
+            this.Controls.Add(this.textBoxSobrenome);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -138,10 +142,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ListBox ListBoxContatos;
+        private System.Windows.Forms.TextBox textBoxNome;
+        private System.Windows.Forms.TextBox textBoxSobrenome;
+        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.ListBox ListBoxContato;
         private System.Windows.Forms.Button IncluirContato;
     }
 }
