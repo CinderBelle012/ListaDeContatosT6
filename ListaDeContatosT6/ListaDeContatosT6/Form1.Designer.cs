@@ -34,7 +34,7 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxSobrenome = new System.Windows.Forms.TextBox();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
-            this.ListBoxContato = new System.Windows.Forms.ListBox();
+            this.ListaDeContato = new System.Windows.Forms.ListBox();
             this.IncluirContato = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -95,15 +95,15 @@
             this.textBoxTelefone.TabIndex = 6;
             this.textBoxTelefone.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // ListBoxContato
+            // ListaDeContato
             // 
-            this.ListBoxContato.FormattingEnabled = true;
-            this.ListBoxContato.ItemHeight = 25;
-            this.ListBoxContato.Location = new System.Drawing.Point(526, 12);
-            this.ListBoxContato.Name = "ListBoxContato";
-            this.ListBoxContato.Size = new System.Drawing.Size(270, 429);
-            this.ListBoxContato.TabIndex = 7;
-            this.ListBoxContato.SelectedIndexChanged += new System.EventHandler(this.ListBoxContatos_SelectedIndexChanged);
+            this.ListaDeContato.FormattingEnabled = true;
+            this.ListaDeContato.ItemHeight = 25;
+            this.ListaDeContato.Location = new System.Drawing.Point(526, 12);
+            this.ListaDeContato.Name = "ListaDeContato";
+            this.ListaDeContato.Size = new System.Drawing.Size(270, 429);
+            this.ListaDeContato.TabIndex = 7;
+            this.ListaDeContato.SelectedIndexChanged += new System.EventHandler(this.ListBoxContatos_SelectedIndexChanged);
             // 
             // IncluirContato
             // 
@@ -121,7 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 865);
             this.Controls.Add(this.IncluirContato);
-            this.Controls.Add(this.ListBoxContato);
+            this.Controls.Add(this.ListaDeContato);
             this.Controls.Add(this.textBoxTelefone);
             this.Controls.Add(this.textBoxSobrenome);
             this.Controls.Add(this.textBoxNome);
@@ -145,7 +145,7 @@
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxSobrenome;
         private System.Windows.Forms.TextBox textBoxTelefone;
-        private System.Windows.Forms.ListBox ListBoxContato;
+        private System.Windows.Forms.ListBox ListaDeContato;
         private System.Windows.Forms.Button IncluirContato;
     }
 }

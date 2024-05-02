@@ -45,9 +45,32 @@ namespace ListaDeContatosT6
             StreamReader ler = new StreamReader("Contatos.txt");
             listaDeContatos = new Contato[Convert.ToInt32(ler.ReadLine())];
 
+            for (int x = 0; x < listaDeContatos.Length; x++)
+            {
+                listaDeContatos[x] =new Contato();
+                listaDeContatos[x].Nome = ler.ReadLine();
+                listaDeContatos[x].Sobrenome = ler.ReadLine();
+                listaDeContatos[x].Telefone = ler.ReadLine();    
+            }
+            ler.Close();
+        }
+        private void Exibir()
+        {
+            ListaDeContato.Items.Clear();
+
+            for (int x = 0; x < listaDeContatos.Length; x++)
+            {
+                ListaDeContato.Items.Add(ListaDeContato[x].ToString());
+            }
+
         }
 
-
+        private void LimparCampos()
+        {
+            textBoxNome.Text = string.Empty;    
+            textBoxSobrenome.Text = string.Empty;
+            textBoxTelefone.Text = string.Empty;
+        }
 
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,7 +98,7 @@ namespace ListaDeContatosT6
             contato.Sobrenome = textBoxSobrenome.Text;
             contato.Telefone = textBoxTelefone.Text;
 
-            ListBoxContato.Items.Add(contato.ToString() );
+            ListaDeContato.Items.Add(contato.ToString() );
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
